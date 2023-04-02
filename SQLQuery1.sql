@@ -1,11 +1,12 @@
-create table Ecomerce(
+create database Ecomerce;
+use Ecomerce;
+
+create table Cliente(
 
 	Codigo int not null,
 	Nome varchar(100) not null,
 	TipoPessoa char not null
 )
-
-use Ecomerce;
 
 select *
 from Cliente;
