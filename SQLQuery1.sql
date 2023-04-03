@@ -107,5 +107,5 @@ delete Produtos;
 select *
 from Produtos;
 
-insert Produtos values(1, 'Canete', 'Azul', 2.50),(2,'Caderno', 'Preto 20 materias', 20.00);
+insert Produtos values(1, 'Caneta', 'Azul', 2.50),(2,'Caderno', 'Preto 20 materias', 20.00);
 
