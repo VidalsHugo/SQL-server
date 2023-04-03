@@ -75,3 +75,37 @@ select *
 from PedidoItem;
 
 insert PedidoItem values(1, 1, 2.50, 2);
+
+insert Cliente(Codigo, Nome, TipoPessoa) values(3, 'Steve', 'F');
+
+update Cliente
+set Codigo = 2
+where Nome = 'Vidal';
+
+select *
+from Cliente;
+
+--Chave Primaria
+alter table Cliente add constraint pk_cliente primary key(Codigo);
+
+--insert Cliente values(1, 'igor', 'F'); ERROR CHAVE DUPLICADA
+
+select *
+from PedidoItem;
+
+--***Adicionado chave primaria em Codigo e CodigoProduto por Design***
+--insert PedidoItem values(1, 1, 3.5, 3); ERROR CHAVE DUPLICADA
+
+select *
+from Pedido;
+
+--Chave estrangeira
+alter table PedidoItem add constraint fk_pedido foreign key (Codigo) references Pedido(Codigo);
+
+delete Produtos;
+
+select *
+from Produtos;
+
+insert Produtos values(1, 'Canete', 'Azul', 2.50),(2,'Caderno', 'Preto 20 materias', 20.00);
+
